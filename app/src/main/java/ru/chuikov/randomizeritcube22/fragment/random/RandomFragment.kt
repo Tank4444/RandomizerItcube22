@@ -9,7 +9,6 @@ import ru.chuikov.randomizeritcube22.R
 
 
 class RandomFragment : Fragment() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

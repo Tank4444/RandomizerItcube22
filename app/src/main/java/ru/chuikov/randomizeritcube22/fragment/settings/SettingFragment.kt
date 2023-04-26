@@ -30,7 +30,7 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = viewModel.audiences.value?.let { InputAudienceAdapter(it) }
+        val adapter = viewModel.getList().let { InputAudienceAdapter(it) }
         binding.inputAudienceList.adapter = adapter
         binding.inputAudienceAdd.setOnClickListener {
             (binding.inputAudienceList.adapter as InputAudienceAdapter).add()

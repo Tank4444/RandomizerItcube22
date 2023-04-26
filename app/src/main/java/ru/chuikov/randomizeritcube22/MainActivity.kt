@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        binding.bottomNavigationView.selectedItemId=R.id.random_nav_bar
         replaceFragment(RandomFragment())
 
         binding.bottomNavigationView.setOnItemSelectedListener {
